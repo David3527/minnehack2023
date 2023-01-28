@@ -1,0 +1,1 @@
+<h1>Minnehack</h1>
