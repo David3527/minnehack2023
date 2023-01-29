@@ -39,8 +39,18 @@ var player2Y= initialY;
 
 var initial2X = 299
 var initial2Y = CANVAS_HEIGHT-118
-var player3X = initialX;
-var player3Y= initialY;
+var player3X = initial2X;
+var player3Y= initial2Y;
+
+var initial3X = 299
+var initial3Y = CANVAS_HEIGHT-118
+var playerX = initial3X;
+var playerY= initial3Y;
+
+var initial4X = CANVAS_WIDTH-133
+var initial4Y = 1.75*128-3
+var player4X = initial4X;
+var player4Y= initial4Y;
 
 
 var setSize = 128;
@@ -127,7 +137,41 @@ function movement2() {
 }
 }
 
+function movement3() {
+    
+    setInterval(function(){
+        if(playerY > 400) {
+            playerY = playerY -16
+        }
+        if(player4X === 400) {
+            player4X = player4X -16
+        }
+        setInterval(function(){
+            if(player4X === 398) {
+                player4X = player4X
 
+            }
+            }, 2000);
+        setInterval(function(){
+                if(player4X ===400 && player4X >= 0) {
+                    player4X = player4X -16
+                }
+                }, 50);
+        setInterval(function(){
+            if(player4X == 0 && playerY >= 0) {
+                playerY = playerY -16
+            }
+            if(player4X > 400) {
+                player4X = player4X -16
+            }
+            }, 50);
+        }, 50);
+}
+// setInterval(function(){
+//     if(player4X = 0 && playerY > 0) {
+//         playerY = playerY -16
+//     }
+// })
 
 
 
@@ -138,7 +182,14 @@ ctx.drawImage(playerImage,frameXSecondFish*frameSize, animation*frameSize, frame
 function car2(animation) {
 ctx2.drawImage(playerImage,frameXSecondFish*frameSize, animation*frameSize, frameSize, frameSize, player3X, player3Y, setSize, setSize);
 }
-    
+
+function car3(animation) {
+ctx3.drawImage(playerImage,frameXSecondFish*frameSize, animation*frameSize, frameSize, frameSize, playerX, playerY, setSize, setSize);
+}
+
+function car4(animation, frameXSecondFish) {
+ctx3.drawImage(playerImage,frameXSecondFish*frameSize, animation*frameSize, frameSize, frameSize, player4X, player4Y, setSize, setSize);
+}
 
 function truck(x, y, animation) {
 ctx.drawImage(playerImage,frameXSecondFish*frameSize, animation*frameSize, frameSize, frameSize, x, y, setSize, setSize);
@@ -171,8 +222,16 @@ function grass3(x, y, animation) {
 ctx3.drawImage(grassBackgroundImage,frameXSecondFish*frameSize3, animation*frameSize3, frameSize3, frameSize3, x, y, setSize, setSize);
 }
 
+function stop(x, y, animation) {
+ctx3.drawImage(playerImage,frameXSecondFish*frameSize, animation*frameSize, frameSize, frameSize, x, y, setSize/2, setSize/2);
+}
 
-
+function stopLayer() {
+    stop(3.25*setSize,1.35*setSize,8)
+    stop(1.25*setSize,1.35*setSize,8)
+    stop(3.25*setSize,3.35*setSize,8)
+    stop(1.25*setSize,3.35*setSize,8)
+}
 
 function kindaLikeTheBackgroundLayer() {
     for(i=0; i<CANVAS_WIDTH; i++) {
@@ -227,6 +286,13 @@ function layer72() {
     car2(0)
     
 }
+
+function layer73() {
+    // truck2(2.35*setSize, 1.50*setSize, 5, 1)
+    // truck2(2.35*setSize, 2.31*setSize, 6, 1)
+    car3(0)
+    car4(1,1)
+}
 function scene0 () {
     layer7();
 }
@@ -249,6 +315,8 @@ function scene22() {
 function scene33() {
     kindaLikeTheBackgroundLayer3();
     notReallyTheTrueBackgroundLayer3();
+    stopLayer();
+    layer73()
 }
 
 
