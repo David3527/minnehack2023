@@ -58,7 +58,6 @@ function userMovement() {
 }
 
 function animatedMovement() {
-        player2Y = player2Y -32
     
     // if(player2Y > 0) {
     //     player2Y = player2Y - setSize/12;
@@ -75,11 +74,14 @@ function animatedMovement() {
 }
 
 function movement() {
-    while (player2Y>0) {
-    
-    document.setTimeout(animatedMovement(), 100)
+    setInterval(function(){
+        if(player2Y > 0) {
+            player2Y = player2Y -16
+        }       
+      }, 50);
 }
-}
+
+
 
 function car(animation) {
 ctx2.drawImage(playerImage,frameXSecondFish*frameSize, animation*frameSize, frameSize, frameSize, player2X, player2Y, setSize, setSize);
@@ -96,7 +98,6 @@ ctx.drawImage(backgroundImage,frameXSecondFish*frameSize2, animation*frameSize2,
 function grass(x, y, animation) {
 ctx.drawImage(grassBackgroundImage,frameXSecondFish*frameSize3, animation*frameSize3, frameSize3, frameSize3, x, y, setSize, setSize);
 }
-// movement()
 
 
 
