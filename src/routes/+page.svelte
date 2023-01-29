@@ -39,8 +39,8 @@
                 in other drivers’ blind spots. Be particularly conscious of blind spots when
                 driving near commercial vehicles. <br>
                 <br>
+                <canvas id="canvas2"></canvas>
                 <b>Turns</b> <br>
-                <canvas id="canvas3"></canvas>
                 <br>
                 Improper turns cause many traffic crashes. Move safely into the correct
                 lane well ahead of the place where you will make the actual turn. <br>
