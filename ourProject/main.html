@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MinneDrive</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
-<h1>
-MinneDrive
-
-</h1>
+<nav class="navbar">
+    <div class="navbar">MinneDrive</div>
+</nav>
 
 <body>
     
-    <p> <h3>Changing Lanes</h3> <br>
+    <div class="container">
+        <h3>Changing Lanes</h3> <br>
         <br>
         It is often necessary to change lanes in order to make a turn, merge with
         other traffic, or to perform other driving activities. Lane changing can
@@ -23,8 +24,14 @@ MinneDrive
         into and check for vehicles. If you rely only on mirrors, you may not see
         vehicles in certain positions, known as “blind spots.” <br>
         <br>
-
-        <canvas id=canvas1></canvas>
+        <div class="canvasContainer">
+            <canvas id=canvas1></canvas>
+            <div class="buttonContainer">
+                <button onclick="movement()" class="thisIsARealButtonInCaseThereWasDoubtsAboutWhetherOrNotThisWasAButton">Activate</button>
+                <button onclick="reset()" class="thisIsARealButtonInCaseThereWasDoubtsAboutWhetherOrNotThisWasAButton">Reset</button>
+            </div>
+        </div>
+       
 
         <h3>Blind Spots</h3> <br><br>
         Blind spots are areas around your vehicle where your view is obstructed.
@@ -38,7 +45,14 @@ MinneDrive
         in other drivers’ blind spots. Be particularly conscious of blind spots when
         driving near commercial vehicles. <br>
         <br>
-        <canvas id="canvas2"></canvas>
+        <div class="canvasContainer">
+            <canvas id="canvas2"></canvas>
+            <div class="buttonContainer">
+                <button onclick="movement2()" class="thisIsARealButtonInCaseThereWasDoubtsAboutWhetherOrNotThisWasAButton">Activate</button>
+                <button onclick="reset()" class="thisIsARealButtonInCaseThereWasDoubtsAboutWhetherOrNotThisWasAButton">Reset</button>
+            </div>  
+        </div>
+        
         <h3>Turns</h3> <br><br>
         Improper turns cause many traffic crashes. Move safely into the correct
         lane well ahead of the place where you will make the actual turn. <br>
@@ -57,9 +71,18 @@ MinneDrive
         • When waiting to make a left turn at a green traffic light with oncoming
          traffic, position the car into the intersection where your body appears
          even with the curb line. The only opportunity to make a left turn may
-         occur when the green light changes to yellow <br></p>
+         occur when the green light changes to yellow <br>
+         <div class="canvasContainer" >
+            <canvas id="canvas3"></canvas>
+            <div class="buttonContainer">
+                <button onclick="movement3()" class="thisIsARealButtonInCaseThereWasDoubtsAboutWhetherOrNotThisWasAButton">Activate</button>
+                <button onclick="reset()" class="thisIsARealButtonInCaseThereWasDoubtsAboutWhetherOrNotThisWasAButton">Reset</button>
+            </div>    
+        </div>
+               
+    </div> 
 
-         <canvas id="canvas3"></canvas>
-    
+         
+    <script src="car.js"></script>
 </body>
 </html>

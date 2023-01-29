@@ -4,39 +4,72 @@ body {
 
 #canvas1 {
     border: 5px solid black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 640px;
-    height: 640px;
+    /* top: 50%;
+    left: 50%; */
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 320px;
+    height: 320px;
     z-index: 1;
 }
 
 #canvas2 {
     border: 5px solid black;
-    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 640px;
-    height: 640px;
-    z-index: 2;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 320px;
+    height: 320px;
+    z-index: 1;
+}
+
+#canvas3 {
+    border: 5px solid black;
+    top: 50%;
+    left: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 320px;
+    height: 320px;
+    z-index: 1;
 }
 
 .thisIsARealButtonInCaseThereWasDoubtsAboutWhetherOrNotThisWasAButton {
     width: 100px;
-    height: 75px;
+    height: 50px;
     background-color: black;
     color: white;
+    margin: 20px;
 }
 
 .navbar {
     background-color:rgb(132, 132, 207);
     color: white;
     margin: 0;
-    height: 100 rem;
+    height: 50 rem;
     padding: 2%;
     width: auto;
     font-size: 60px;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.container {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 28.5%;
+    margin-top: 0;
+}
+
+.canvasContainer {
+    margin-bottom: 0;
+
 }
