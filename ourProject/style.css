@@ -77,3 +77,13 @@ h3 {
     margin-bottom: 0;
 
 }
+
+input[type=radio] {
+    border: 6px solid #ccc;
+    box-sizing: border-box;
+}
+
+.question {
+    border: 6px solid rgb(93, 92, 92);
+    box-sizing: border-box;
+}
