@@ -17,7 +17,7 @@ crossingRoadBackgroundImage.src = "assets/road.png";
 const grassBackgroundImage = new Image();
 grassBackgroundImage.src = "assets/grass.png";
 const passingRoad = new Image();
-passingRoad.src = "assets/passingRoad.png"
+passingRoad.src = "assets/passRoad.png"
 
 const frameSize = 64;
 const frameSize2 = 320;
@@ -82,16 +82,14 @@ function animatedMovement() {
 userMovement()
 let armed = true
 function reset() {
-    player2X = initialX
-    player2Y = initialY
-    pause = true
+    location.reload()
 }
 function movement() {
     pause = false
     let left=true
     if(armed = true) {
     setInterval(function(){
-        if(player2Y >= 0 && player2X > 234.5 && left === true && pause === false) {
+        if(player2Y >= 0.00 && player2X > 234 && left === true && pause === false) {
             player2Y = player2Y -16
             player2X = player2X - 16
         } else if(player2Y >= 95.33333333333333333333333333333333 && pause === false) {
@@ -146,9 +144,9 @@ function kindaLikeTheBackgroundLayer() {
 }
 function notReallyTheTrueBackgroundLayer() {
     // road(0*setSize, 0*setSize, 0)
-        // for(j=0; j<CANVAS_HEIGHT; j++) {
-            // secondRoad(2*setSize, 2*setSize, 0)
-        // }
+        for(j=0; j<CANVAS_HEIGHT; j++) {
+            secondRoad(2*setSize-7, j*setSize, 0)
+        }
 
 }
 
@@ -174,7 +172,7 @@ function scene0 () {
 
 function scene1() {
     kindaLikeTheBackgroundLayer()
-    // notReallyTheTrueBackgroundLayer()
+    notReallyTheTrueBackgroundLayer()
 }
 
 function scene2() {
