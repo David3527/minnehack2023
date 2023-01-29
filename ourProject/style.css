@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: "Verdana";
 }
 
 #canvas1 {
@@ -51,6 +52,9 @@ body {
     padding: 2%;
     width: auto;
     font-size: 60px;
+    font-family: "Verdana";
+    font-weight: bold;
+    
 }
 
 h3 {
@@ -72,4 +76,14 @@ h3 {
 .canvasContainer {
     margin-bottom: 0;
 
+}
+
+input[type=radio] {
+    border: 6px solid #ccc;
+    box-sizing: border-box;
+}
+
+.question {
+    border: 6px solid rgb(93, 92, 92);
+    box-sizing: border-box;
 }
